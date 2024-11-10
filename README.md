@@ -43,7 +43,7 @@ first: migrate with --seed
 - admin creds:
 - admin@example.com
 - kiberia
-!!!Warning!!!
+- !!!Warning!!!
 Before creating new Author, create a new user than paste the user_id in user_id field in create author form.
 P.S. or paste 0 in that field
 

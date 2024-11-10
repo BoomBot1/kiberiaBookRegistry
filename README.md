@@ -3,9 +3,8 @@
 - Laravel 11
 - Laravel/Breeze
 - Laravel/sanctum
-- MySQL
+- MySQL 8.3
 - Laravel\ui - for bootstrap
-- All versions described in composer.json
 
 
 ## API:

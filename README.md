@@ -20,8 +20,8 @@ routes:
 - Response: json(
 'id', 'title', 'edition', 'created_at', 'author_id'
   )
-- PATCH: /books/{id} - body: title, edition, genres(array of genres id); Auth required
-- DELETE: /books/{id} - Auth required
+- PATCH: /books/{id} - body: title, edition, genres(array of genres id); Auth required (Bearer token in Authorization header)
+- DELETE: /books/{id} - Auth required (Bearer token in Authorization header)
 - GET: /authors
 - Response: json(
 id, name, book_quantity
@@ -30,7 +30,7 @@ id, name, book_quantity
 - Reposen: json(
 id, name, books=>[books]
   )
-- PATCH: /authors/{id} - body: name; Auth required
+- PATCH: /authors/{id} - body: name; Auth required (Bearer token in Authorization header)
 - GET: /genres?paginate=integer&page=integer
 - Response: json(
 id, title, books =>[books]
@@ -48,7 +48,7 @@ second: log in with admin creds on '...:8000/login'. Click on "admin" in navigat
 
 ## Project init:
 add your .env file via .env.example. Run:
-- php artisan migrate:fresh --seed
+- php artisan migrate:fresh --seed ( В ином случае, нужно будет создать админа. В таблице users есть boolean колонка admin. Каждый author привязан к соотвествующему user, по которому и проходит авторизация для доступа к patch, delete запросам)
 - php artisan key:generate
 - npm run dev
 - php artisan serve (in the second terminal\bash\cmd\ps)

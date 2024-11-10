@@ -48,7 +48,11 @@ second: log in with admin creds on '...:8000/login'. Click on "admin" in navigat
 
 ## Project init:
 add your .env file via .env.example. Run:
-- php artisan migrate:fresh --seed ( В ином случае, нужно будет создать админа. В таблице users есть boolean колонка admin. Каждый author привязан к соотвествующему user, по которому и проходит авторизация для доступа к patch, delete запросам)
+- php artisan migrate:fresh --seed ( В ином случае, нужно будет создать админа. В таблице users есть boolean колонка admin)
 - php artisan key:generate
 - npm run dev
 - php artisan serve (in the second terminal\bash\cmd\ps)
+
+## Description
+- Каждый author привязан к соотвествующему user, по которому и проходит авторизация для доступа к patch, delete запросам
+- Логирование происходит в базу, таблицу logs. Формат лога: "changed_att1: old_value->new_value; changed_att2: old_value->new_value ...." в поле message.

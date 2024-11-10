@@ -1,6 +1,6 @@
 ## Used
 - PHP 8.2
-- Laravel 11
+- Laravel 11.30.00
 - Laravel/Breeze
 - Laravel/sanctum
 - MySQL 8.3
